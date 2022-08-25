@@ -42,9 +42,6 @@
                                     <a class="nav-link {{ Request::is('admin/home') ? 'active' : '' }}" href="{{ route('admin.home') }}">Dashboard</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link {{ Request::is('admin/sewa') ? 'active' : '' }}" href="{{ route('admin.sewa') }}">Daftar Sewa</a>
-                                </li>
-                                <li class="nav-item">
                                     <a class="nav-link {{ Request::is('admin/mobil') ? 'active' : '' }}" href="{{ route('admin.mobil') }}">Daftar Mobil</a>
                                 </li>
                                 <li class="nav-item">

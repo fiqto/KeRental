@@ -26,9 +26,6 @@ Auth::routes();
 Route::get('/home', [HomeController::class, 'home'])->name('home');
 Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
 
-// Route Sewa Mobil
-Route::get('admin/sewa', [SewaController::class, 'adminSewa'])->name('admin.sewa');
-
 // Route Daftar Mobil
 Route::get('admin/mobil', [MobilController::class, 'adminMobil'])->name('admin.mobil');
 Route::get('mobil/cari', [MobilController::class, 'mobilCari'])->name('mobil.cari');
