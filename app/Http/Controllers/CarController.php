@@ -12,7 +12,7 @@ class CarController extends Controller
 {
     public function index()
     {
-        $car = car::all();
+        $car = Car::all();
 
         return view('car.index')
             ->with('cars', $car);
@@ -28,10 +28,6 @@ class CarController extends Controller
     public function store(StoreCarRequest $request)
     {
         $car = Car::create($request->validated());
-        $car->name = $request->name;
-        $car->price = $request->price;
-        $car->status = $request->status;
-        $car->save();
 
         return redirect()->route('cars.index')
             ->with('success','Data Berhasil Dibuat!');
@@ -67,4 +63,6 @@ class CarController extends Controller
         return redirect()->route('cars.index')
             ->with('success', 'Berhasil Dihapus!');
     }
+
+    
 }
